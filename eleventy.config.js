@@ -9,6 +9,12 @@ eleventyConfig.addPassthroughCopy('assets');
 		output : '_site',
 		includes: '_templates',
 		data : '_data'
-  	}
+  	},
+ 		eleventyComputed: {
+      debugCollections: ({ collections }) => {
+        console.log(Object.keys(collections));
+        return '';
+      }
+    }
 	};
 }
