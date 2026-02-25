@@ -1,0 +1,29 @@
+{% include 'includes/header.html' %}
+{% if title %}<h1 class="">{{ title }}</h1>{% endif %}
+<p class="">By {{ author }} | Posted on {{ dateString }}</p>
+{{ content }}
+{% include 'includes/footer.html' %}
+{% assign nextPost = collections.post | getNextCollectionItem %}
+{% assign previousPost = collections.post | getPreviousCollectionItem %}
+
+{% if nextPost %}
+<div class="mt-4">
+  <h3>Next Post</h3>
+  <h4>
+    <a href="{{ nextPost.url }}">
+      {{ nextPost.data.title }}
+    </a>
+  </h4>
+</div>
+{% endif %}
+
+{% if previousPost %}
+<div class="mt-4">
+  <h3>Previous Post</h3>
+  <h4>
+    <a href="{{ previousPost.url }}">
+      {{ previousPost.data.title }}
+    </a>
+  </h4>
+</div>
+{% endif %}

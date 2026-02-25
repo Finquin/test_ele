@@ -6,39 +6,102 @@
   pnpm add -D @11ty/eleventy
   ```
 
+
+- ## 1.1 Site
+
+  ```
+  html
+   ├── head
+   │   ├── title
+   │   ├── meta (charset)
+   │   ├── meta (viewport)
+   │   └── style
+   └── body
+       ├── header (site-header)
+       │   ├── h1
+       │   └── p
+       │       └── b
+       ├── nav (site-nav)
+       │   ├── a
+       │   ├── a
+       │   ├── a
+       │   └── a
+       ├── div.container
+       │   ├── aside (site-aside)
+       │   │   ├── h2
+       │   │   ├── h5
+       │   │   ├── div.fakeimg
+       │   │   ├── p
+       │   │   ├── h3
+       │   │   ├── p
+       │   │   ├── div.fakeimg
+       │   │   ├── br
+       │   │   ├── div.fakeimg
+       │   │   ├── br
+       │   │   └── div.fakeimg
+       │   └── main (site-main)
+       │       ├── h2
+       │       ├── h5
+       │       ├── div.fakeimg
+       │       ├── p
+       │       ├── p
+       │       ├── br
+       │       ├── h2
+       │       ├── h5
+       │       ├── div.fakeimg
+       │       ├── p
+       │       └── p
+       └── footer
+           └── h2
+     ```
+
+
+
+
+
+
+
 - ## 1.1 Estructura
 
   ```
    Proyect
+   ├── assets
+   │   └── css
+   │      └── style.css
    ├── src
+   │   ├── _data
+   │   │   └──site.json
    │   ├── _templates
-   │   │   ├── layouts
-   │   │   │ └── base.html
-   │   │   └── includes
-   │   │       ├── triptych.html
-   │   │       ├── navigation.html
-   │   │       ├── header.html
-   │   │       └── footer.html
+   │   │   ├── includes
+   │   │   │   ├── triptych.html
+   │   │   │   ├── navigation.html
+   │   │   │   ├── header.html
+   │   │   │   └── footer.html
+   │   │   └── layouts
+   │   │       └── base.html
    │   ├── index.html
    │   └── about.md
-   ├── package-lock.json
-   ├── package.json
+   ├── book
+   │   ├── el_método_scalper
+   │   ├── css
+   │   └── javascript
    ├── eleventy.config.js
-   └── assets
-       └── css
-           └── style.css
+   ├── eslint.config.js
+   ├── package.json
+   ├── package-lock.json
+   └── README.md
   ```
 
     - ### 1.1.1 Creamos la estructura de carpetas
 
         #### Carpetas
         ```
-        md -p src/{_templates/{layouts,includes},assets/css}
+         md -p src/{_templates/{layouts,includes},_data,books} assets/css
         ```
 
         #### Files
         ```
-        th src/{{_templates/{layouts/base.html,includes/{triptych.html,navigation.html,header.html,footer.html}},index.html,about.md},../eleventy.config.js}
+        th src/{{_templates/{layouts/base.html,includes/{triptych.html,navigation.html,header.html,footer.html}},index.html,about.md},../eleventy.config.js,README.md}
         ```
     - ### 1.1.2 Agregamos Contenido a los archivos
         - package.json (agregamos)

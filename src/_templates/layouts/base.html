@@ -1,4 +1,4 @@
-{% include "includes/metaInfo.html" %}
-{% include "includes/header.html" %}
-{{ content }}
-{% include "includes/footer.html" %}
+{% include 'includes/header.html' %}
+{% if title %}<h1>{{ title }}</h1>{% endif %}
+{% include 'includes/container.html'}
+{% include 'includes/footer.html' %}

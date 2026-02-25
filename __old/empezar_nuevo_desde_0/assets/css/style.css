@@ -1,0 +1,165 @@
+:root{
+ --clr-bkg0: 0, 0%, 19%;
+ --clr-text0: 0, 0%, 75%;
+}
+
+/* ------------------------ */
+/* Reset                    */
+/* ------------------------ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* * Reset margins *  */
+body ,
+h1,
+h2,
+h3,
+h5,
+figure ,
+picture {
+	margin: 0;
+}
+
+  /* set up the body */
+
+  body {
+  line-height: 1.5;
+  min-height:100vh;
+  color: hsl(var(--clr-txt0)/.1);
+  background-color: hsl(var(--clr-bkg0)) ;
+  font-family: Arial;
+  }
+
+/* make images eas-ier to work with */
+
+  img,
+  picture {
+  max-width: 100%;
+  display: block;
+  }
+
+li{
+ list-style: none;
+}
+
+
+
+a {
+  color :hsl(var(--clr-light));
+  text-decoration: none;
+}
+
+svg path {
+	fill: hsl(var(--clr-light));
+}
+
+
+img,
+picture {
+ max—width: 100%;
+ display: block;
+}
+
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+
+
+/* --------------- */
+/* Site            */
+/* --------------- */
+
+
+.site-header {
+   display: flex;
+   justify-content: space-between;
+	 padding: 2px;
+	 text-align: center;
+	 background: #1abc9c;
+	 color: white;
+  }
+
+/* make images eas-ier to work with */
+
+
+.site-nav {
+	background-color: #333;
+  display: flex;
+
+  	.items {
+      display: flex;
+ 			padding: 0 15px;
+
+		li a {
+			color: white;
+			padding: 14px 20px;
+			text-decoration: none;
+			text-align: center;
+
+      &:hover {
+			  background-color: #ddd;
+			  color: black;
+		    }
+      }
+		}
+  }
+
+
+/* Column container */
+.container {
+  display: flex;
+}
+
+/* Sidebar/left column */
+.site-aside {
+  flex: 10%;
+  background-color: hsl(var(--clr-light));
+  padding: 20px;
+}
+
+
+/* Main column */
+.site-main {
+flex:90%;
+  background-color:hsl(var(--clr-light));
+  padding: 20px;
+}
+
+
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/* Footer */
+.site-footer {
+   display: flex;
+   align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .container, .items{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
